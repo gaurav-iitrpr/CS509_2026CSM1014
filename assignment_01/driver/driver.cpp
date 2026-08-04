@@ -1,5 +1,5 @@
 #include <iostream>
-#include <chrono>
+#include "../../common/timer.h"
 #include "driver.h"
 
 #include "../src/matrix.h"
@@ -7,8 +7,10 @@
 #include "../src/gemm_blocking.h"
 
 
+
+
 using namespace std;
-using namespace std::chrono;
+
 
 void runTest(const std::string& filename)
 {
@@ -23,17 +25,16 @@ void runTest(const std::string& filename)
     }
 
 
-    // Start timer
-    auto start = high_resolution_clock::now();
+  Timer timer;
 
-    // Call algorithm
-    C = gemmSimple(A, B, M, K, N);
+// start timer
+timer.start();
 
-    // Stop timer
-    auto stop = high_resolution_clock::now();
+ // call algorithm
+C = gemmSimple(A, B, M, K, N);
 
-    auto duration =
-        duration_cast<microseconds>(stop - start);
+// stop timer
+long long duration = timer.stop();
 
     cout << "\nRunning : " << filename << "\n\n";
 
@@ -41,39 +42,37 @@ void runTest(const std::string& filename)
     cout << "Result Matrix\n";
     printMatrix(C);
 
-    cout << "\nExecution Time : "
-         << duration.count()
-         << " microseconds\n";
+   cout <<"\nExecution Time : "<< duration << " microseconds\n";
 
     // Blocking GEMM
 
-    auto start2 = high_resolution_clock::now();
+    Timer timer2;
+// start timer
+timer2.start();
+ 
+// call algorithm
+Matrix C2 = gemmBlocking(A, B, M, K, N, 2);
 
-    Matrix C2 = gemmBlocking(A, B, M, K, N, 2);
-
-    auto stop2 = high_resolution_clock::now();
-
-    auto duration2 =
-        duration_cast<microseconds>(stop2 - start2);
+// stop timer
+long long duration2 = timer2.stop();
 
     cout << "\nAlgorithm : GEMM Blocking\n\n";
     cout << "Result Matrix\n";
     printMatrix(C2);
 
-    cout << "\nExecution Time : "
-         << duration2.count()
-         << " microseconds\n";
+    cout <<"\nExecution Time : "<<duration2 << " microseconds\n";
 }
 
 void runAssignment1()
 {
     int choice;
 
-    cout << "\n===== Assignment 1 : GEMM =====\n";
+    cout << "\n== Assignment 1 : GEMM ==\n";
     cout << "1. Run gemm_test_01.txt\n";
     cout << "2. Run gemm_test_02.txt\n";
     cout << "3. Run gemm_test_03.txt\n";
-    cout << "4. Run All Test Files\n";
+    cout << "4. Run generated_test.txt\n";
+    cout << "5. Run All Test Files\n";
     cout << "0. Back\n";
 
     cout << "Enter Choice : ";
@@ -92,11 +91,15 @@ void runAssignment1()
         case 3:
             runTest("assignment_01/tests/gemm_test_03.txt");
             break;
-
         case 4:
+        runTest("assignment_01/tests/generated_test.txt");
+        break;
+
+        case 5:
             runTest("assignment_01/tests/gemm_test_01.txt");
             runTest("assignment_01/tests/gemm_test_02.txt");
             runTest("assignment_01/tests/gemm_test_03.txt");
+             runTest("assignment_01/tests/generated_test.txt");
             break;
 
         case 0:

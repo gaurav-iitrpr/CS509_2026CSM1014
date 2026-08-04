@@ -17,19 +17,19 @@ bool readMatrices(const std::string& filename,
         return false;
     }
 
-    // Read dimensions
-  
+   
+  // read M N K
         if (!(fin >> M >> K >> N))
 {
     std::cout << "Error: Invalid or empty input file!" << std::endl;
     return false;
 }
 
-    // Resize matrices
+    
     A.resize(M, std::vector<int>(K));
     B.resize(K, std::vector<int>(N));
 
-    // Read Matrix A
+   // read matrix A
     for (int i = 0; i < M; i++)
     {
         for (int j = 0; j < K; j++)
@@ -38,7 +38,7 @@ bool readMatrices(const std::string& filename,
         }
     }
 
-    // Read Matrix B
+  // read matrix B
     for (int i = 0; i < K; i++)
     {
         for (int j = 0; j < N; j++)

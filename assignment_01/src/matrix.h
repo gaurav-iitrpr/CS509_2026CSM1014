@@ -6,7 +6,7 @@
 
 using Matrix = std::vector<std::vector<int>>;
 
-// Read matrices from input file
+// read matrices from input file
 bool readMatrices(const std::string& filename,
                   Matrix& A,
                   Matrix& B,
@@ -14,7 +14,7 @@ bool readMatrices(const std::string& filename,
                   int& K,
                   int& N);
 
-// Print matrix
+// print matrix
 void printMatrix(const Matrix& matrix);
 
 #endif
