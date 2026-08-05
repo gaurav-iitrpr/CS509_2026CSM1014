@@ -51,7 +51,7 @@ long long duration = timer.stop();
 timer2.start();
  
 // call algorithm
-Matrix C2 = gemmBlocking(A, B, M, K, N, 2);
+Matrix C2 = gemmBlocking(A, B, M, K, N, 16);
 
 // stop timer
 long long duration2 = timer2.stop();
