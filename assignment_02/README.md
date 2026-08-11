@@ -1,0 +1,1 @@
+g++ common_wrapper/wrapper.cpp common/timer.cpp assignment_01/driver/driver.cpp assignment_01/src/matrix.cpp assignment_01/src/gemm_simple.cpp assignment_01/src/gemm_blocking.cpp assignment_02/driver/driver.cpp assignment_02/src/graph.cpp assignment_02/src/csr.cpp assignment_02/src/bellman_ford.cpp assignment_02/src/floyd_warshall.cpp -o assignment.exe
