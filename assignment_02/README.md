@@ -1,8 +1,3 @@
-
-
-
-
-
 # CS509 Assignment 2 – Graph Algorithms
 
 ##  Overview
@@ -147,7 +142,7 @@ CS509_2026CSM1014/
 
 ---
 
-# 📥 Input Format
+#  Input Format
 
 Each graph input file follows this format:
 
@@ -217,7 +212,7 @@ Generated test cases are used to evaluate the performance of the algorithms on l
 
 ---
 
-# ⚙️ Test Case Generator
+#  Test Case Generator
 
 The project contains a graph test generator:
 
@@ -249,7 +244,7 @@ A graph with approximately `500` vertices and `2500` edges can be generated.
 
 ---
 
-# 🛠️ Compilation
+#  Compilation
 
 ## Windows / MinGW
 
@@ -267,7 +262,7 @@ assignment.exe
 
 ---
 
-# ▶️ Running the Program
+#  Running the Program
 
 The project provides a menu-driven interface.
 
@@ -295,7 +290,7 @@ to open Assignment 2.
 
 ---
 
-# 📊 Assignment 2 Menu
+# Assignment 2 Menu
 
 After selecting Assignment 2:
 
@@ -313,7 +308,7 @@ Enter Choice:
 
 ---
 
-# 🔵 Bellman-Ford Execution
+#  Bellman-Ford Execution
 
 
 ```text
@@ -359,7 +354,7 @@ Negative Weight Cycle Detected!
 
 ---
 
-# 🟢 Floyd-Warshall Execution
+#  Floyd-Warshall Execution
 
 Select:
 
@@ -386,7 +381,7 @@ All-Pairs Shortest Path Matrix
 
 ---
 
-# ⏱️ Execution Time Measurement
+#  Execution Time Measurement
 
 The project contains a reusable timer:
 
@@ -411,7 +406,7 @@ This allows the performance of the algorithms to be compared for different graph
 
 ---
 
-# 📊 Execution Results
+#  Execution Results
 
 The following execution results were obtained by running the **Bellman-Ford** and **Floyd-Warshall** algorithms on different graph sizes.
 
@@ -426,7 +421,7 @@ The following execution results were obtained by running the **Bellman-Ford** an
 
 
 
-# 📈 Algorithm Comparison
+#  Algorithm Comparison
 
 | Feature                      | Bellman-Ford                | Floyd-Warshall              |
 | ---------------------------- | --------------------------- | --------------------------- |
@@ -440,7 +435,7 @@ The following execution results were obtained by running the **Bellman-Ford** an
 
 ---
 
-# 🔍 Implementation Details
+#  Implementation Details
 
 ## Bellman-Ford
 
@@ -488,7 +483,7 @@ The project requires:
 
 ---
 
-# 📌 Conclusion
+#  Conclusion
 
 This assignment implements and demonstrates two important shortest-path algorithms:
 
@@ -498,7 +493,7 @@ The project also uses **CSR representation**, **automated test generation**, and
 
 ---
 
-## 👨‍💻 Authors
+##  Authors
 
 **Gaurav Kumar**
 `2026CSM1014`
@@ -506,8 +501,8 @@ The project also uses **CSR representation**, **automated test generation**, and
 
 ---
 
-## 📚 Course Information
+##  Course Information
 
-**Course:** CS509
+**Course:** CS509-Pg Software Lab
 **IIT ROPAR**
 **Assignment:** Assignment 2 – Graph Algorithms
