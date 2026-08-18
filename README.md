@@ -1,1 +1,1 @@
-# CS509_2026CSM1014
+g++ common_wrapper/wrapper.cpp common/timer.cpp assignment_01/driver/driver.cpp assignment_01/src/matrix.cpp assignment_01/src/gemm_simple.cpp assignment_01/src/gemm_blocking.cpp assignment_02/driver/driver.cpp  assignment_02/src/bellman_ford.cpp assignment_02/src/floyd_warshall.cpp  assignment_03/driver/driver.cpp assignment_03/common/mst_graph.cpp assignment_03/src/prims.cpp assignment_03/src/kruskal.cpp common/graph.cpp common/csr.cpp assignment_03/common/mst_csr.cpp -o assignment3.exe

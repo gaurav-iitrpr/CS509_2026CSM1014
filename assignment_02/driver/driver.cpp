@@ -1,8 +1,8 @@
 #include <iostream>
 #include <climits>
 #include "driver.h"
-#include "../src/graph.h"
-#include "../src/csr.h"
+#include "../../common/graph.h"
+#include "../../common/csr.h"
 #include "../src/bellman_ford.h"
 #include "../src/floyd_warshall.h"
 
