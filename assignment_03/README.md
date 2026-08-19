@@ -185,6 +185,7 @@ The following test cases were executed for Assignment 3:
   |`mst_100.txt`    |        100 |      300
   |`mst_10000.txt`  |    10,000  |  30,000
   |`mst_50000.txt`  |     50,000 |  100,000
+  |`mst_100000.txt` |    100000  |  200000
 
 The graphs are connected so that an MST exists.
 
