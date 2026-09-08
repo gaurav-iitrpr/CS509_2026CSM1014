@@ -1,8 +1,6 @@
 #include "bellman_ford.h"
-
 #include <iostream>
 #include <climits>
-
 using namespace std;
 
 vector<int> bellmanFord(Graph &graph, CSR &csr, int source){
