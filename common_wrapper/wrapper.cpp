@@ -2,6 +2,7 @@
 #include "../assignment_01/driver/driver.h"
 #include "../assignment_02/driver/driver.h"
 #include "../assignment_03/driver/driver.h"
+#include "../assignment_04/driver/driver.h"
 using namespace std;
 
 void showMenu()
@@ -15,6 +16,7 @@ void showMenu()
         cout << "1. Assignment 1 - GEMM\n";
         cout << "2. Assignment 2 -Graph Algorithms\n";
         cout << "3. Assignment 3-\n";
+          cout << "4. Assignment 4-\n";
         cout << "0. Exit\n";
         cout << "Enter Choice : ";
         cin >> choice;
@@ -31,6 +33,9 @@ void showMenu()
    
                 case 3:
             runAssignment3();
+                break;
+                 case 4:
+                runAssignment4Individual();
                 break;
             case 0:
                 cout << "Exiting...\n";
